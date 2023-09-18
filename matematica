@@ -1,21 +1,50 @@
 print("Creditos: Aaron")
-print("Nesse jogo, terá que fazer o maxímo de pontos possível!, boa sorte!")
+oi = int(input("Aperte qualquer número para continuar! "))
 import time, random
 pontos = 0
+pontos2 = 0
+vida = 3
+vida2 = 3
+if oi>=0:
+        e = int(input("Esse modo de jogo tem 3 modos, 1 para modo de pontos, 2 para modo de vidas! e 3 para sair! "))
+
 while True:
-    m1 = random.randint(11,99)
-    m2 = random.randint(11,99)
-    r = m1*m2
-    nr = int(input(f"Quanto é {m1}x{m2}? "))
-    print("Vendo se sua resposta está certa...")
-    time.sleep(1.5)
-    if nr==r:
-        print("Você acertou! parabêns!")
-        pontos+=1
-        print(f"Você está com {pontos} pontos!")
-    else:
-        print("Você infelizmente errou, se não tem pontos, ficará com negativos!")
-        pontos-=1
-        print(f"Você está com {pontos} pontos!")
-    
-    
+        if e==1:
+            m1 = random.randint(11,99)
+            m2 = random.randint(11,99)
+            r = m1*m2
+            nr = int(input(f"Quanto é {m1}x{m2}? "))
+            print("Vendo se sua resposta está certa...")
+            time.sleep(1.5)
+            if nr==r:
+                print("Você acertou! parabêns!")
+                pontos+=1
+                print(f"Você está com {pontos} pontos!")
+            else:
+                print("Você infelizmente errou, se não tem pontos, ficará com negativos!")
+                pontos-=1
+                print(f"Você está com {pontos} pontos!")
+        elif e==2:
+            m3 = random.randint(11,99)
+            m4 = random.randint(11,99)
+            r2 = m3*m4
+            nr2 = int(input(f"Quanto é {m3}x{m4}? "))
+            print("Vendo se sua resposta está certa...")
+            time.sleep(1.5)
+            if nr2==r2:
+                print("Você acertou! parabêns!")
+                print(f"Você está com {vida} de vida!!")
+            else:
+                print("Você perdeu uma vida pelo fato de ter errado!")
+                vida-=1
+                print(f"Você está com {vida} de vida!")
+                if vida<=0:
+                    print("Você perdeu!")
+                    break
+        elif e==3:
+                print("Saindo....")
+                time.sleep(1.5)
+                print("Você saiu com sucesso!")
+                break
+        else:
+                print("Número invalido!")
