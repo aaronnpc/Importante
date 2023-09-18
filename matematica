@@ -1,0 +1,21 @@
+print("Creditos: Aaron")
+print("Nesse jogo, terá que fazer o maxímo de pontos possível!, boa sorte!")
+import time, random
+pontos = 0
+while True:
+    m1 = random.randint(11,99)
+    m2 = random.randint(11,99)
+    r = m1*m2
+    nr = int(input(f"Quanto é {m1}x{m2}? "))
+    print("Vendo se sua resposta está certa...")
+    time.sleep(1.5)
+    if nr==r:
+        print("Você acertou! parabêns!")
+        pontos+=1
+        print(f"Você está com {pontos} pontos!")
+    else:
+        print("Você infelizmente errou, se não tem pontos, ficará com negativos!")
+        pontos-=1
+        print(f"Você está com {pontos} pontos!")
+    
+    
