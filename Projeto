@@ -1,9 +1,10 @@
 vdl = 1500
 vida = 100
 x = 2500
+vdrVI = 3500
 dinheiro = 0
 while True:
-import random, time
+    import random, time
     print("Você estava na floresta, quando de repente, acha um monstro, ele é um lobo, derrote-o!")
     rng = random.randint(1,6)
     input("Digite algo para continuar! ")
@@ -57,22 +58,107 @@ import random, time
         time.sleep(1)
         print("Você persegue ele!")
         print("Você entra em uma caverna bem estranha, com muitos monstros")
-        break
-    while True:
         vida = 100
-        input("Digite algo para continuar! ")
-        print("Você achou um monstro, parece um X,")
-        rng2 = random.randint(1,6)
-        if rng2==1:
-            c1 = random.randint(1,200)
-            print("Sua espada, não estava NADA afiada")
-            print('O X diz, "HAHAHAHA, Salve meu tempo, com essa espada de lixo você NUNCA irá me ganhar! ')
-            x-=c1
-            print(f"O X está com {x} de vida")
-        elif rng2==2
+        break
+while True:
+    input("Digite algo para continuar! ")
+    print("Você achou um monstro, parece um X,")
+    print("Girando o dado...")
+    time.sleep
+    rng2 = random.randint(1,6)
+    if rng2==1:
+        c1 = random.randint(1,200)
+        print(f"Sua espada, não estava NADA afiada")
+        print('O X diz, "HAHAHAHA, Salve meu tempo, com essa espada de lixo você NUNCA irá me ganhar! ')
+        x-=c1
+        print(f"O X está com {x} de vida")
+    elif rng2==2:
         c2 = random.randint(201,400)
-        print("Sua espada estava um pouco mais afiada... mas ainda não o suficiente!")
+        print(f"Sua espada estava um pouco mais afiada... mas ainda não o suficiente! Você deu {c2} de dano... decepcionante")
         print("O X diz: 'Melhore, vou esperar encantar sua espada, AH, esqueci, não é Minecraft, HAHAHAHAH")
         x-=c2
         print(f"O X está com {x} de vida!")
-    
+    elif rng2==3:
+        c3 = random.randint(401,600)
+        print(f"Sua espada estava afiada! Você deu {c3} de dano!")
+        print("O X diz: 'HAHAHAHA, Salve meu tempo, você não vale absolutamente nada! HAHAHAHAHA!")
+        x-=c3
+        print(f"O X está com {x} de vida!")
+    elif rng2==4:
+        c4 = random.randint(601,700)
+        print(f"Sua espada estava quase o suficiente para arrancar uma boa vida dele! Você deu {c4} de dano!")
+        print("O X diz: Ok, ok, agora você foi bem, mas ainda da para rir da sua cara HAHAHAH!")
+        x-=c4
+        print(f"O X está com {x} de vida!")
+    elif rng2==5:
+        c5 = random.randint(701,800)
+        print(f"Sua espada estava BEM AFIADA! VOCÊ DEU {c5} DE DANO!")
+        print("O X diz: Essa doeu, bixo!")
+        x-=c5
+        print(f"O X está com {x} de vida!")
+    else:
+        c6 = random.randint(801, 1000)
+        print(f"Sua espada estava EXTREMAMENTE AFIADA! PARABÊNS! VOCÊ DEU {c6} DE DANO!")
+        print("O X diz: SEU IDIOTA! IDIOTA, IDIOTA, IDIOTA!")
+        x-=c6
+        print(f"O X está com {x} de vida!")
+    d = random.randint(15,25)
+    vida-=d
+    print(f"Você está com {vida} vida!")
+    if vida<=0:
+        print("Você perdeu... que decepção!")
+    if x<=0:
+        print("VOCÊ NÃO PODE ME DERROTAR NÃOOOOOOOOOOOOOOOOOOO!")
+        print("Você derrotou o X! parabêns!")
+        break
+vida = 250
+while True:
+    print("Essa sala parecia falsa! eu sabia! Mas... oque é isso? *Você adquiriu uma armadura de pedra!* Agora sua vida é 250! ")
+    input("Pressione algo para continuar!")
+    rng3 = random.randint(1,6)
+    if rng3==1:
+        d1 = random.randint(1,250)
+        print(f"Sua espada, estava nada afiada! treine mais! Você deu {d1} de dano!")
+        print("O Ramon VI diz 'Você é horrivel em lutar! treine mais para me vencer")
+        vdrVI-=d1
+        print(f"O Ramon VI está com {vdrVI} de vida!")
+    elif rng3==2:
+        d2 = random.randint(251,400)
+        print(f"Sua espada estava um pouco afiada, ainda tem que melhorar! Você deu {d2} de dano!")
+        print("O Ramon VI diz 'Você é uma pura decepção! Saia daqui! Salvara meu tempo!")
+        vdrVI-=d2
+        print(f"O Ramon VI está com {vdrVI} de vida!")
+    elif rng3==3:
+        d3 = random.randint(401,600)
+        print(f"Sua espada estava afiada! Se melhorar um pouco, você da muito dano, você deu {d3} de dano!")
+        print("O Ramon VI diz 'Você melhorou... mas ainda tem que melhorar mais!")
+        vdrVI-=d3
+        print(f"O Ramon VI está com {vdrVI} de vida!")
+    elif rng3==4:
+        d4 = random.randint(601,700)
+        print(f"Sua espada estava bastante afiada! Você quase atingiu o ponto perfeito, faltou só um pouquinho! Você deu {d4} de dano!")
+        print("O Ramon VI diz 'Ok, nessa você foi bem! parabêns!")
+        vdrVI-=d4
+        print(f"O Ramon VI está com {vdrVI} de vida!")
+    elif rng3==5:
+        d5 = random.randint(701,900)
+        print(f"Sua espada estava BEM AFIADA! Parabêns! Você deu {d5} de dano!")
+        print("O Ramon VI diz 'Essa doeu! pare de fazer isso comigo!'")
+        vdrVI-=d5
+        print(f"O Ramon VI está com {vdrVI} de vida!")
+    else:
+        d6 = random.randint(901,1000)
+        print(f"Sua espada estava PERFEITAMENTE afiada! parabêns!")
+        print("O Ramon VI diz 'NÃÃÃÃÃO! EU NÃO POSSO TOMAR ESSA QUANTIDADE DE DANO!'")
+        vdrVI-=d6
+        print(f"O Ramon VI está com {vdrVI} de vida!")
+    a = random.randint(25,50)
+    vida-=a
+    print(f"Você está com {vida} vida!")
+    if vida<=0:
+        print("Você perdeu, mas já?")
+        break
+    if vdrVI<=0:
+        print("VOCÊ NÃO PODE ME DERROTAR!!!!!!!!!!!!!!! NÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃÃO!")
+        
+        
